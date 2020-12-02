@@ -1,0 +1,2 @@
+#!/bin/sh
+cp -r ~/.config/openbox/menu.xml ~/.config/openbox/menus/papirus/menu.xml

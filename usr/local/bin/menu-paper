@@ -1,0 +1,2 @@
+#!/bin/sh
+cp -r ~/.config/openbox/menus/paper/menu.xml ~/.config/openbox/menu.xml ; openbox --reconfigure

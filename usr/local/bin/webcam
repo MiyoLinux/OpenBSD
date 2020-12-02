@@ -1,0 +1,2 @@
+#!/bin/sh
+ffplay -f v4l2 -noborder -video_size 320x240 -i /dev/video
