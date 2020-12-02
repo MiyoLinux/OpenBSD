@@ -41,7 +41,7 @@
 			</item>
 			<item label="Window (click the window)">
 				<action name="Execute">
-					<execute>scrot -q 90 -s -e -b 'mv $f ~/Pictures/'</execute>
+					<execute>scrot -q 90 -s -b -e 'mv $f ~/Pictures/'</execute>
 				</action>
 			</item>
 		</menu>
