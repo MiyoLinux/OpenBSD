@@ -1,0 +1,61 @@
+
+#########################################
+#                                       #
+#	     Power Management           #
+#                                       #
+#########################################
+
+# Just to keep the screen from turning off...
+
+xset s off & 
+xset -dpms & 
+
+#########################################
+#                                       #
+#	       System Beep              #
+#                                       #
+#########################################
+
+# Turn off system beep...
+
+xset b off &
+
+#########################################
+#                                       #
+#           Wallpaper Options           #
+#                                       #
+#########################################
+
+# Start a single wallpaper with nitrogen...
+
+#nitrogen --restore &
+
+# Start the wallpaper-changer script (uses feh)
+
+/usr/local/bin/wallpaper-changer &
+
+
+#########################################
+#                                       #
+#             Miscellaneous             #
+#                                       #
+#########################################
+
+###  Turn on Compton compositing...
+
+compton &
+
+###  Turn on the panel...
+
+sleep 2 && tint2 &
+
+###  Turn on the volume icon, battery 
+###  indicator, and eject...
+
+#sleep 4 && /usr/local/libexec/tray-app/battery &
+#sleep 4 && /usr/local/libexec/tray-app/eject &
+#sleep 4 && /usr/local/libexec/tray-app/sound &
+
+###  Turn on the Conky...
+
+#sleep 6 && conky &

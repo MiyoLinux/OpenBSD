@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/local/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<separator label="OpenBSD"/>
+		<item icon="/usr/local/share/icons/Paper/48x48/apps/system-file-manager.png" label="File Manager">
+			<action name="Execute">
+				<execute>pcmanfm</execute>
+			</action>
+		</item>
+		<item icon="/usr/local/share/icons/Paper/48x48/apps/lxterminal.png" label="Terminal">
+			<action name="Execute">
+				<execute>sakura</execute>
+			</action>
+		</item>
+		<item icon="/usr/local/share/icons/Paper/48x48/apps/preferences-system-search.png" label="Run Command">
+			<action name="Execute">
+				<execute>dmenu_run -fn Ubuntu-11 -nb '#1F2326' -sb '#207487'</execute>
+			</action>
+		</item>
+		<separator label="System"/>
+		<menu execute="pmenu.py --mode openbox" icon="/usr/local/share/icons/Paper/48x48/emblems/emblem-new.png" id="pmenu" label="Applications"/>
+		<menu icon="/usr/local/share/icons/Paper/48x48/apps/shutter.png" id="root-menu-1024" label="Screenshot">
+			<item icon="/usr/local/share/icons/Paper/48x48/apps/shutter.png" label="Now">
+				<action name="Execute">
+					<execute>scrot -e 'mv $f ~/Pictures/'</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Paper/48x48/apps/shutter.png" label="In 10 seconds...">
+				<action name="Execute">
+					<execute>scrot -q 90 -d 10 -e 'mv $f ~/Pictures/'</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Paper/48x48/apps/shutter.png" label="In 20 seconds...">
+				<action name="Execute">
+					<execute>scrot -q 90 -d 20 -e 'mv $f ~/Pictures/'</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Paper/48x48/apps/shutter.png" label="Area (drag the mouse)">
+				<action name="Execute">
+					<execute>scrot -q 90 -s -e 'mv $f ~/Pictures/'</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Paper/48x48/apps/shutter.png" label="Window (click the window)">
+				<action name="Execute">
+					<execute>scrot -q 90 -s -e 'mv $f ~/Pictures/'</execute>
+				</action>
+			</item>
+		</menu>
+		<menu icon="/usr/local/share/pixmaps/openbox.png" id="root-menu-713111" label="Openbox">
+			<item icon="/usr/local/share/icons/Paper/48x48/emblems/emblem-synchronizing.png" label="Reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+			<item icon="/usr/local/share/icons/Paper/48x48/apps/aptdaemon-upgrade.png" label="Restart">
+				<action name="Restart"/>
+			</item>
+			<item icon="/usr/local/share/pixmaps/obconf.png" label="Menu Editor">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+			<separator/>
+			<menu icon="/usr/local/share/icons/Paper/48x48/categories/applications-development.png" id="root-menu-713111-763242" label="Menu Chooser">
+				<item icon="/usr/local/share/icons/Paper/48x48/places/user-home.png" label="Paper Icons">
+					<action name="Execute">
+						<execute>menu-paper</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Paper/48x48/apps/mate-panel.png" label="Papirus Icons">
+					<action name="Execute">
+						<execute>menu-papirus</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Paper/48x48/emblems/emblem-unreadable.png" label="No Icons">
+					<action name="Execute">
+						<execute>menu-noicons</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Paper/48x48/actions/process-stop.png" label="Manual (no icons)">
+					<action name="Execute">
+						<execute>menu-manual</execute>
+					</action>
+				</item>
+			</menu>
+			<separator/>
+			<menu icon="/usr/local/share/icons/Paper/48x48/apps/mintbackup.png" id="root-menu-713111-71558" label="Menu Backup">
+				<menu icon="/usr/local/share/icons/Paper/48x48/emblems/emblem-important.png" id="root-menu-713111-71558-61651" label="Are you sure that you want to do this?">
+					<menu icon="/usr/local/share/icons/Paper/48x48/status/dialog-error.png" id="root-menu-713111-71558-61651-17714" label="Are you REALLY sure???">
+						<item icon="/usr/local/share/icons/Paper/48x48/emotes/face-smile-big.png" label="DO IT!!!">
+							<action name="Execute">
+								<execute>menu-paper-bu</execute>
+							</action>
+						</item>
+					</menu>
+				</menu>
+			</menu>
+			<separator/>
+			<menu icon="/usr/local/share/icons/Paper/48x48/apps/text-editor.png" id="root-menu-713111-49120" label="Configuration Files">
+				<item icon="/usr/local/share/icons/Paper/48x48/apps/text-editor.png" label="autostart">
+					<action name="Execute">
+						<execute>leafpad ~/.config/openbox/autostart</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Paper/48x48/apps/text-editor.png" label=".conkyrc">
+					<action name="Execute">
+						<execute>leafpad ~/.conkyrc</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Paper/48x48/apps/text-editor.png" label="compton.conf">
+					<action name="Execute">
+						<execute>leafpad ~/.config/compton.conf</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Paper/48x48/apps/text-editor.png" label="menu.xml">
+					<action name="Execute">
+						<execute>leafpad ~/.config/openbox/menu.xml</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Paper/48x48/apps/text-editor.png" label="rc.xml">
+					<action name="Execute">
+						<execute>leafpad ~/.config/openbox/rc.xml</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<separator label="Session"/>
+		<item icon="/usr/local/share/icons/Paper/48x48/actions/system-lock-screen.png" label="Screenlock">
+			<action name="Execute">
+				<execute>slock</execute>
+			</action>
+		</item>
+		<menu icon="/usr/local/share/icons/Paper/48x48/actions/system-shutdown.png" id="root-menu-713111-49121" label="Exit">
+			<item icon="/usr/local/share/icons/Paper/48x48/actions/system-shutdown.png" label="Shutdown">
+				<action name="Execute">
+					<execute>doas shutdown -p now</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Paper/48x48/actions/system-reboot.png" label="Reboot">
+				<action name="Execute">
+					<execute>doas reboot</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Paper/48x48/actions/system-log-out.png" label="Logout">
+				<action name="Execute">
+					<execute>openbox --exit</execute>
+				</action>
+			</item>
+		</menu>
+	</menu>
+</openbox_menu>

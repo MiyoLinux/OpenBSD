@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/local/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<separator label="OpenBSD"/>
+		<item icon="/usr/local/share/icons/Papirus/48x48/apps/system-file-manager.svg" label="File Manager">
+			<action name="Execute">
+				<execute>pcmanfm</execute>
+			</action>
+		</item>
+		<item icon="/usr/local/share/icons/Papirus/48x48/apps/lxterminal.svg" label="Terminal">
+			<action name="Execute">
+				<execute>sakura</execute>
+			</action>
+		</item>
+		<item icon="/usr/local/share/icons/Papirus/48x48/apps/preferences-system-search.svg" label="Run Command">
+			<action name="Execute">
+				<execute>dmenu_run -fn Ubuntu-11 -nb '#1F2326' -sb '#207487'</execute>
+			</action>
+		</item>
+		<separator label="System"/>
+		<menu execute="pmenu.py --mode openbox" icon="/usr/local/share/icons/Papirus/48x48/apps/launch.svg" id="pmenu" label="Applications"/>
+		<menu icon="/usr/local/share/icons/Papirus/48x48/apps/digikam.svg" id="root-menu-1024" label="Screenshot">
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/digikam.svg" label="Now">
+				<action name="Execute">
+					<execute>scrot -e 'mv $f ~/Pictures/'</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/digikam.svg" label="In 10 seconds...">
+				<action name="Execute">
+					<execute>scrot -q 90 -d 10 -e 'mv $f ~/Pictures/'</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/digikam.svg" label="In 20 seconds...">
+				<action name="Execute">
+					<execute>scrot -q 90 -d 20 -e 'mv $f ~/Pictures/'</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/digikam.svg" label="Area (drag the mouse)">
+				<action name="Execute">
+					<execute>scrot -q 90 -s -e 'mv $f ~/Pictures/'</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/digikam.svg" label="Window (click the window)">
+				<action name="Execute">
+					<execute>scrot -q 90 -s -e 'mv $f ~/Pictures/'</execute>
+				</action>
+			</item>
+		</menu>
+		<menu icon="/usr/local/share/icons/Papirus/48x48/apps/openbox.svg" id="root-menu-713111" label="Openbox">
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/freefilesync.svg" label="Reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/livepatch.svg" label="Restart">
+				<action name="Restart"/>
+			</item>
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/menu-editor.svg" label="Menu Editor">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+			<separator/>
+			<menu icon="/usr/local/share/icons/Papirus/48x48/apps/preferences-desktop.svg" id="root-menu-713111-763242" label="Menu Chooser">
+				<item icon="/usr/local/share/icons/Papirus/48x48/places/user-bluegrey-desktop.svg" label="Paper Icons">
+					<action name="Execute">
+						<execute>menu-paper</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Papirus/48x48/places/user-blue-desktop.svg" label="Papirus Icons">
+					<action name="Execute">
+						<execute>menu-papirus</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Papirus/48x48/emblems/vcs-conflicting.svg" label="No Icons">
+					<action name="Execute">
+						<execute>menu-noicons</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Papirus/48x48/emblems/emblem-unavailable.svg" label="Manual (no icons)">
+					<action name="Execute">
+						<execute>menu-manual</execute>
+					</action>
+				</item>
+			</menu>
+			<separator/>
+			<menu icon="/usr/local/share/icons/Papirus/48x48/apps/mintbackup.svg" id="root-menu-713111-71558" label="Menu Backup">
+				<menu icon="/usr/local/share/icons/Papirus/48x48/status/messagebox_warning.svg" id="root-menu-713111-71558-61651" label="Are you sure that you want to do this?">
+					<menu icon="/usr/local/share/icons/Papirus/48x48/status/messagebox_critical.svg" id="root-menu-713111-71558-61651-17714" label="Are you REALLY sure???">
+						<item icon="/usr/local/share/icons/Papirus/48x48/emotes/face-smile-big.svg" label="DO IT!!!">
+							<action name="Execute">
+								<execute>menu-papirus-bu</execute>
+							</action>
+						</item>
+					</menu>
+				</menu>
+			</menu>
+			<separator/>
+			<menu icon="/usr/local/share/icons/Papirus/48x48/apps/text-editor.svg" id="root-menu-713111-49120" label="Configuration Files">
+				<item icon="/usr/local/share/icons/Papirus/48x48/apps/text-editor.svg" label="autostart">
+					<action name="Execute">
+						<execute>leafpad ~/.config/openbox/autostart</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Papirus/48x48/apps/text-editor.svg" label=".conkyrc">
+					<action name="Execute">
+						<execute>leafpad ~/.conkyrc</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Papirus/48x48/apps/text-editor.svg" label="compton.conf">
+					<action name="Execute">
+						<execute>leafpad ~/.config/compton.conf</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Papirus/48x48/apps/text-editor.svg" label="menu.xml">
+					<action name="Execute">
+						<execute>leafpad ~/.config/openbox/menu.xml</execute>
+					</action>
+				</item>
+				<item icon="/usr/local/share/icons/Papirus/48x48/apps/text-editor.svg" label="rc.xml">
+					<action name="Execute">
+						<execute>leafpad ~/.config/openbox/rc.xml</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<separator label="Session"/>
+		<item icon="/usr/local/share/icons/Papirus/48x48/apps/system-lock-screen.svg" label="Screenlock">
+			<action name="Execute">
+				<execute>slock</execute>
+			</action>
+		</item>
+		<menu icon="/usr/local/share/icons//Papirus/48x48/apps/gnome-logout.svg" id="root-menu-713111-49121" label="Exit">
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/system-shut-down.svg" label="Shutdown">
+				<action name="Execute">
+					<execute>doas shutdown -p now</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/system-reboot.svg" label="Reboot">
+				<action name="Execute">
+					<execute>doas reboot</execute>
+				</action>
+			</item>
+			<item icon="/usr/local/share/icons/Papirus/48x48/apps/system-log-out.svg" label="Logout">
+				<action name="Execute">
+					<execute>openbox --exit</execute>
+				</action>
+			</item>
+		</menu>
+	</menu>
+</openbox_menu>

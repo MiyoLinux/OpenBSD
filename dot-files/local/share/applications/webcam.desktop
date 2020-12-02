@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Webcam
+Exec=doas /usr/local/bin/webcam
+Icon=digikam
+Terminal=false
+Categories=AudioVideo;
