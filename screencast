@@ -1,0 +1,23 @@
+Audio
+
+aucat -o ~/Videos/name-of-the-file.wav
+_________________________________________________________
+
+Screencast
+
+ffmpeg -f x11grab -s 1366x768 -r 15 -i $DISPLAY -c:v libx264 -preset ultrafast ~/Videos/name-of-the-file.mkv
+_________________________________________________________
+
+Webcam
+
+ffplay -f v4l2 -noborder -video_size 320x240 -i /dev/video
+
+Alternative video sizes...
+
+640x360 
+848x480 
+320x240 (My Default)
+320x180 (My Default but wider)
+
+960x540 
+1280x720 (Almost full screen)
