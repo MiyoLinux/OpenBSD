@@ -2,7 +2,7 @@ General information:
 1. yad provides the calendar on all of the panels when clicking on the clock.
 2. The menu launcher (on all of the panels) opens a full-screen Rofi menu (left-click = Light menu / right-click = Dark menu). I have pictures of both in the rofi folder.
 3. The panels with "Colors" in their names are using the awesome fonts to provide the icons for the launchers and date/time.
-4. Though they are not shown, a volume icon, battery icon, and eject icon can be added to each panel is desired. I have them commented out in the autostart file, because I don't use them. ;)
+4. Though they are not shown, a volume icon, battery icon, and eject icon can be added to each panel if desired. I have them commented out in the autostart file, because I don't use them. ;)
 
 If the light panels look "light blue", it's because of the wallpaper behind them at the time. Hahaha!
 
