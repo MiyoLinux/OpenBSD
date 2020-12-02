@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --randomize --bg-scale ~/.wallpapers/*; while sleep 600; do feh --no-fehbg --randomize --bg-scale ~/.wallpapers/*; done
