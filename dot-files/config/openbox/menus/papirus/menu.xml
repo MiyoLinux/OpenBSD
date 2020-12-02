@@ -42,7 +42,7 @@
 			</item>
 			<item icon="/usr/local/share/icons/Papirus/48x48/apps/digikam.svg" label="Window (click the window)">
 				<action name="Execute">
-					<execute>scrot -q 90 -s -e 'mv $f ~/Pictures/'</execute>
+					<execute>scrot -q 90 -s -b -e 'mv $f ~/Pictures/'</execute>
 				</action>
 			</item>
 		</menu>
