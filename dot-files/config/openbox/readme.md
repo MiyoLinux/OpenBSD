@@ -1,4 +1,4 @@
-I have four menus that I sometimes switch between. Three of them are using pmenu to provide a pipe menu to supply a dynamic applications menu.
+I have four menus that I sometimes switch between. Three of them are using pmenu as a pipe menu to supply a dynamic applications menu.
 
 https://gitlab.com/o9000/pmenu
 
