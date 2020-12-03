@@ -223,18 +223,18 @@
 		<separator label="Session"/>
 		<item label="Screen Lock">
 			<action name="Execute">
-				<execute>lxdm -c USER_SWITCH</execute>
+				<execute>slock</execute>
 			</action>
 		</item>
 		<menu id="root-menu-24821" label="Exit">
 			<item label="Shutdown">
 				<action name="Execute">
-					<execute>dbus-send --system --print-reply --dest=&quot;org.freedesktop.ConsoleKit&quot; /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop</execute>
+					<execute>doas shutdown -p now</execute>
 				</action>
 			</item>
 			<item label="Reboot">
 				<action name="Execute">
-					<execute>dbus-send --system --print-reply --dest=&quot;org.freedesktop.ConsoleKit&quot; /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart</execute>
+					<execute>doas reboot</execute>
 				</action>
 			</item>
 			<item label="Logout">
