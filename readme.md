@@ -6,4 +6,4 @@ The "Screencast" file shows the terminal commands that I use to record the scree
 If anyone wants to use anything here, feel free to. :)
 
 ![alt text](
-https://github.com/MiyoLinux/OpenBSD/blob/main/git5.png?raw=tr)
+https://13707080-557519846114226283.preview.editmysite.com/uploads/1/3/7/0/13707080/git5_orig.png)
