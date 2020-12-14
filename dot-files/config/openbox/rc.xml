@@ -347,6 +347,11 @@
         <command>dmenu_run -fn Ubuntu-11 -nb '#1F2326' -sb '#207487'</command>
       </action>
     </keybind>
+    <keybind key="W-d">
+      <action name="Execute">
+        <command>deadbeef</command>
+      </action>
+    </keybind>
     <keybind key="W-f">
       <action name="Execute">
         <command>pcmanfm</command>
@@ -354,6 +359,20 @@
           <enabled>false</enabled>
           <name>PCManFM</name>
         </startupnotify>
+      </action>
+    </keybind>
+    <keybind key="W-S-f">
+      <action name="Execute">
+        <command>doas pcmanfm</command>
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>PCManFM as root</name>
+        </startupnotify>
+      </action>
+    </keybind>
+    <keybind key="W-A-l">
+      <action name="Execute">
+        <command>doas lxappearance</command>
       </action>
     </keybind>
     <keybind key="W-S-l">
@@ -374,6 +393,11 @@
     <keybind key="W-t">
       <action name="Execute">
         <command>sakura</command>
+      </action>
+    </keybind>
+    <keybind key="W-w">
+      <action name="Execute">
+        <command>doas /usr/local/bin/webcam</command>
       </action>
     </keybind>
     <keybind key="W-S-x">
