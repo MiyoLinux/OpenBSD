@@ -855,12 +855,5 @@
     <application class="Sakura" name="sakura">
       <decor>no</decor>
     </application>
-    <application class="ffplay" name="ffplay">
-      <decor>no</decor>
-      <position force="yes">
-        <x>-10</x>
-        <y>-210</y>
-      </position>
-    </application>
   </applications>
 </openbox_config>
