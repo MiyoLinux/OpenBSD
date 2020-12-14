@@ -42,7 +42,7 @@
 			</item>
 			<item label="Window (click the window)">
 				<action name="Execute">
-					<execute>scrot -q 90 -s -b -e 'mv $f ~/Pictures/'</execute>
+					<execute>scrot -q 90 -s -e 'mv $f ~/Pictures/'</execute>
 				</action>
 			</item>
 		</menu>
@@ -122,6 +122,18 @@
 				</item>
 			</menu>
 		</menu>
+		<menu id="root-menu-9274" label="Accessories">
+			<item label="PCManFM ( as root )">
+				<action name="Execute">
+					<execute>doas pcmanfm</execute>
+				</action>
+			</item>
+			<item label="Customize Look and Feel ( root account )">
+				<action name="Execute">
+					<execute>doas lxappearance</execute>
+				</action>
+			</item>
+		</menu>
 		<separator label="Session"/>
 		<item label="Screenlock">
 			<action name="Execute">
@@ -129,7 +141,7 @@
 			</action>
 		</item>
 		<menu id="root-menu-713111-49121" label="Exit">
-			<item icon="/usr/local/share/icons/Paper/48x48/actions/system-shutdown.png" label="Shutdown">
+			<item label="Shutdown">
 				<action name="Execute">
 					<execute>doas shutdown -p now</execute>
 				</action>
@@ -147,3 +159,4 @@
 		</menu>
 	</menu>
 </openbox_menu>
+
