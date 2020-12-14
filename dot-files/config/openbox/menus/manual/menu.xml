@@ -143,7 +143,7 @@
 				</action>
 			</item>
 		</menu>
-		<separator label="Configuration"/>
+		<separator label="System"/>
 		<menu id="root-menu-713111" label="Openbox">
 			<item label="Reconfigure">
 				<action name="Reconfigure"/>
@@ -219,6 +219,18 @@
 					</action>
 				</item>
 			</menu>
+		</menu>
+		<menu id="root-menu-9274" label="Accessories">
+			<item label="PCManFM ( as root )">
+				<action name="Execute">
+					<execute>doas pcmanfm</execute>
+				</action>
+			</item>
+			<item label="Customize Look and Feel ( root account )">
+				<action name="Execute">
+					<execute>doas lxappearance</execute>
+				</action>
+			</item>
 		</menu>
 		<separator label="Session"/>
 		<item label="Screen Lock">
