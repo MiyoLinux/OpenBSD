@@ -12,3 +12,6 @@ Sakura's Gruvbox theme palette...
 
 ![alt text](https://github.com/MiyoLinux/OpenBSD/blob/main/dot-files/moc/2020-12-23-144639_736x434_scrot.png?raw=true)
 
+Sakura's Solarized Dark theme palette...
+
+![alt text](https://github.com/MiyoLinux/OpenBSD/blob/main/dot-files/moc/2020-12-23-150026_736x434_scrot.png?raw=true)
