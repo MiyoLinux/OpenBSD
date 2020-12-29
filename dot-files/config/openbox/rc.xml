@@ -361,6 +361,20 @@
         </startupnotify>
       </action>
     </keybind>
+    <keybind key="W-g">
+      <action name="Execute">
+        <command>gimp</command>
+      </action>
+    </keybind>
+    <keybind key="W-m">
+      <action name="Execute">
+        <command>sakura -e 'mocp --theme=dim-theme'</command>
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>MOC</name>
+        </startupnotify>
+      </action>
+    </keybind>
     <keybind key="W-S-f">
       <action name="Execute">
         <command>doas pcmanfm</command>
