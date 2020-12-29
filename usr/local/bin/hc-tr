@@ -1,0 +1,4 @@
+#!/bin/sh
+xdotool behave_screen_edge top-right \
+exec pcmanfm
+

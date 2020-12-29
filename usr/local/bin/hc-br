@@ -1,0 +1,4 @@
+#!/bin/sh
+xdotool behave_screen_edge bottom-right \
+exec sakura -e 'nnn'
+
