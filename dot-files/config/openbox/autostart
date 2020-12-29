@@ -1,7 +1,7 @@
 
 #########################################
 #                                       #
-#	     Power Management           #
+#	           Power Management           #
 #                                       #
 #########################################
 
@@ -12,7 +12,7 @@ xset -dpms &
 
 #########################################
 #                                       #
-#	       System Beep              #
+#	             System Beep              #
 #                                       #
 #########################################
 
@@ -34,6 +34,23 @@ xset b off &
 
 /usr/local/bin/wallpaper-changer &
 
+#########################################
+#                                       #
+#              Hot Corners              #
+#                                       #
+#########################################
+
+###  Top left corner (MOC Music Player)
+
+hc-tl &
+
+###  Top right corner (PCManFM)
+
+hc-tr &
+
+###  Bottom right corner (nnn file manager)
+
+hc-br &
 
 #########################################
 #                                       #
