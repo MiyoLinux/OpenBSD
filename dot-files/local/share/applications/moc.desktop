@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=MOC Music Player
+Exec=sakura -e 'mocp --theme=dim-theme'
+Icon=lxmusic
+Terminal=false
+Categories=AudioVideo;
