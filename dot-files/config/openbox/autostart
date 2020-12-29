@@ -22,13 +22,9 @@ xset b off &
 
 #########################################
 #                                       #
-#           Wallpaper Options           #
+#                Wallpaper              #
 #                                       #
 #########################################
-
-# Start a single wallpaper with nitrogen...
-
-#nitrogen --restore &
 
 # Start the wallpaper-changer script (uses feh)
 
