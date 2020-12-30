@@ -1,0 +1,9 @@
+^sep()
+Screen Lock,slock,system-lock-screen
+Exit,^checkout(exit),system-shutdown
+exit,^tag(exit)
+Shutdown,doas shutdown -p now,system-shutdown
+Reboot,doas reboot,system-restart
+Log out,openbox --exit,gnome-logout
+
+

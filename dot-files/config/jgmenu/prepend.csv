@@ -1,0 +1,8 @@
+^sep(OpenBSD)
+
+Search Applications,,preferences-system-search
+^sep()
+File Manager,pcmanfm,system-file-manager
+Terminal,sakura,terminal
+Run Command,dmenu_run -fn Ubuntu-11 -nb '#1F2326' -sb '#207487',system-run
+^sep()
