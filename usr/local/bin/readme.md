@@ -1,3 +1,5 @@
+hc-br (hot corner-bottom right), hc-tl (hot corner-top left), and hc-tr (hot corner-top right) are simple scripts that use xdotool to open certain applications when moving the mouse into a certain corner of the screen.
+
 All of the "menu" scripts are used by my Openbox menus in order to quickly change menus and to easily backup any of the menus if I have edited them.
 
 The "wallpaper-changer" script uses feh to change my wallpaper once every 10 minutes. The script is calling the wallpapers from ~/.wallpapers in my home folder. If you want to use it, but your wallpapers are in a different folder, you will need to edit the script to use the path to your wallpapers. You can also change the amount of time; in which, the script changes wallpapers if you want.
