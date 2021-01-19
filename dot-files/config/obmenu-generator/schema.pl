@@ -31,12 +31,11 @@ our $SCHEMA = [
 
 	{sep => 'OpenBSD'},
 
-    #          COMMAND                 LABEL              ICON
-    {item => ['pcmanfm',          'File Manager', 'system-file-manager']},
-    {item => ['sakura',            'Terminal',     'utilities-terminal']},
-    {item => ['dmenu_run -fn Ubuntu-11 -nb "#1F2326" -sb "#207487"',            'Run command',  'system-run']},
-    {sep => undef},
-{beg => ['Screenshot',	'digikam']}, 
+    #          COMMAND                 					LABEL              ICON
+    {item => ['pcmanfm',          					'File Manager', 'system-file-manager']},
+    {item => ['sakura',            					'Terminal',     'terminal']},
+    {item => ['dmenu_run -fn Ubuntu-11 -nb "#1F2326" -sb "#207487"',	'Run command',  'system-run']},
+	{beg => ['Screenshot',	'digikam']}, 
     	{item => ['scrot -q 90 -d 1 -e "mv $f ~/Pictures/"',	'Now',                   		'digikam']},
 	{item => ['scrot -q 90 -d 10 -e "mv $f ~/Pictures/"',  	'In 10 seconds...',      		'digikam']},
 	{item => ['scrot -q 90 -d 20 -e "mv $f ~/Pictures/"',  	'In 20 seconds...',      		'digikam']},
@@ -44,7 +43,7 @@ our $SCHEMA = [
         {item => ['scrot -q 90 -s -b -e "mv $f ~/Pictures/"',   'Window (click the window)',		'digikam']},
     	{end => undef},
 
-    {sep => 'Categories'},
+    {sep => 'Applications'},
 
     #          NAME            LABEL                ICON
     {cat => ['utility',     'Accessories', 'applications-utilities']},
@@ -59,61 +58,41 @@ our $SCHEMA = [
     {cat => ['settings',    'Settings',    'applications-accessories']},
     {cat => ['system',      'System',      'applications-system']},
 
-    #             LABEL          ICON
-    #{beg => ['My category',  'cat-icon']},
-    #          ... some items ...
-    #{end => undef},
-
-    #            COMMAND     LABEL        ICON
-    #{pipe => ['obbrowser', 'Disk', 'drive-harddisk']},
-
-    ## Generic advanced settings
-    #{sep       => undef},
-    #{obgenmenu => ['Openbox Settings', 'applications-engineering']},
-    #{sep       => undef},
-
-    ## Custom advanced settings
-    {sep => undef},
-    {beg => ['Advanced Settings', 'applications-engineering']},
-
-      # Configuration files
-      {item => ["$editor ~/.conkyrc",              'Conky RC',    'text-x-generic']},
-      {item => ["$editor ~/.config/tint2/tint2rc", 'Tint2 Panel', 'text-x-generic']},
-
-      # obmenu-generator category
-      {beg => ['Obmenu-Generator', 'accessories-text-editor']},
-        {item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-generic']},
-        {item => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-generic']},
-
-        {sep  => undef},
-        {item => ['obmenu-generator -s -c',    'Generate a static menu',             'accessories-text-editor']},
-        {item => ['obmenu-generator -s -i -c', 'Generate a static menu with icons',  'accessories-text-editor']},
-        {sep  => undef},
-        {item => ['obmenu-generator -p',       'Generate a dynamic menu',            'accessories-text-editor']},
-        {item => ['obmenu-generator -p -i',    'Generate a dynamic menu with icons', 'accessories-text-editor']},
-        {sep  => undef},
-
-        {item => ['obmenu-generator -d', 'Refresh cache', 'view-refresh']},
-      {end => undef},
-
-      # Openbox category
+    {sep => 'System'},
       {beg => ['Openbox', 'openbox']},
-        {item => ["$editor ~/.config/openbox/autostart", 'Openbox Autostart',   'text-x-generic']},
-        {item => ["$editor ~/.config/openbox/rc.xml",    'Openbox RC',          'text-x-generic']},
-        {item => ["$editor ~/.config/openbox/menu.xml",  'Openbox Menu',        'text-x-generic']},
-        {item => ['openbox --reconfigure',               'Reconfigure Openbox', 'openbox']},
+        {item => ['openbox --reconfigure',               'Reconfigure Openbox', 'view-refresh']},
+        {item => ['openbox --restart',                   'Restart Openbox',     'livepatch']},
+	{sep => undef},
+        {item => ["$editor ~/.config/openbox/autostart", 'autostart',           'text-editor']},
+        {item => ["$editor ~/.config/compton.conf",      'compton.conf',        'text-editor']},
+        {item => ["$editor ~/.config/openbox/rc.xml",    'rc.xml',              'text-editor']},
       {end => undef},
-    {end => undef},
+
+      {beg => ['Accessories', '/usr/local/share/images/accessories.svg']},
+        {item => ['doas pcmanfm',	'PCManFM (as root)',			    '/usr/local/share/images/root-fm.png']},
+        {item => ['doas lxappearance',  'Customize Look and Feel (root account)',   '/usr/local/share/images/root-theme.png']},
+      {end => undef},
+
+      {beg => ['Obmenu-Generator', 'menu-editor']},
+        {item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-editor']},
+        {item => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-editor']},
+
+        {sep  => undef},
+        {item => ['obmenu-generator -s -c',    'Generate a static menu',             'system-run']},
+        {item => ['obmenu-generator -s -i -c', 'Generate a static menu with icons',  'system-run']},
+        {sep  => undef},
+        {item => ['obmenu-generator -p',       'Generate a dynamic menu',            'system-run']},
+        {item => ['obmenu-generator -p -i',    'Generate a dynamic menu with icons', 'system-run']},
+        {sep  => undef},
+        {item => ['obmenu-generator -d', 'Refresh icon cache', 'view-refresh']},
+      {end => undef},
 
     {sep => 'Session'},
-
-    ## The xscreensaver lock command
     {item => ['slock', 'Lock', 'system-lock-screen']},
 
-    ## This option uses the default Openbox's "Exit" action
-        {beg => ['Exit', 'system-shut-down']},
+      {beg => ['Exit', 'system-shut-down']},
 	{item => ['doas shutdown -p now',  	'Shutdown',	'system-shut-down']},
 	{item => ['doas reboot',		'Reboot',	'system-reboot']},
 	{item => ['openbox --exit',		'Logout',	'system-log-out',]},
-	{end => undef},
+      {end => undef},
 ]
